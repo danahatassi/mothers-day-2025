@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <title>Happy Mother's Day!</title>
+        <style>
+            .side-by-side {
+                display: flex;
+                align-items: center;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 7%;
+            }
+
+            .image-container {
+                flex: 0 0 auto;
+                max-width: 50%; /* Example: Image container takes up to 20% */
+                padding-right: 5%;
+            }
+
+            .image-container img {
+                display: block;
+                width: 80%;
+                height: auto;
+            }
+
+            .text-container {
+                flex: 1;
+            }
+
+            .text-container h1 {
+                color: #CC4156;
+            }
+
+            .compliment-generator {
+                color: #CC4156;
+            }
+
+            body {
+                font-family: "Inter";
+                text-align: left;
+                padding: 50px;
+                background-color: #FFFAFA;
+            }
+
+            .pink-section {
+                background-color: #FFCCD3;
+                padding:40px;
+            }
+
+            .end {
+                padding: 20px;
+                text-align: center;
+                color: #CC4156;
+            }
+
+            h3 {
+                color: #CC4156;
+            }
+
+            #compliment {
+                margin-top: 20px;
+                font-size: 1.5em;
+                color: #444;
+            }
+
+            button {
+                color: #F5F5F5;
+                padding: 10px 20px;
+                font-size: 1em;
+                background-color: #9BCCA3;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #ff8dae;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pink-section">
+            <h3>From: Dana</h3>
+            <h3>To: 엄마</h3>
+        </div>
+        <div class="side-by-side">
+            <div class="image-container">
+                <img src="C:\Users\danaa\Downloads\motherandme.jpg" alt="Mother and Me">
+                
+            </div>
+            <div class="text-container">
+                <h1>Happy Mother's Day, 엄마!</h1>
+                <p>Enjoy the compliments down below, which only display a fraction of what you mean to me. </p>
+            </div>
+        </div>
+        <div class="pink-section">
+            <h2>Behold: the one and only personalized <span class="compliment-generator">Compliment Generator</span>, handcrafted for 엄마.</h2>
+            <button onclick="generateCompliment()">Click for a Compliment!</button>
+            <div id="compliment"></div>
+        </div>
+        <div class="end">
+            <h1>I love you!</h1>
+        </div>
+        <script>
+            const compliments = [
+                "You’re like the moussaka you make, one-of-a-kind, with a lovely balance of tartness and warmth.",
+                "You make studying feel less painful and feel a lot more possible.",
+                "You’re the warm blanket on my coldest school day.",
+                "Sometimes, you know exactly what I need before I do.",
+                "If multitasking were a food, you'd be kimbap: balanced, colorful, all while feeding the whole family."
+            ];
+
+            function generateCompliment() {
+                const randomIndex = Math.floor(Math.random() * compliments.length);
+                document.getElementById('compliment').innerText = compliments[randomIndex];
+            }
+        </script>
+    </body>
+</html>
